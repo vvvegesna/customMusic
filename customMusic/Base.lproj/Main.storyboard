@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TxG-Zf-9oo">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies List Table View Controller-->
+        <scene sceneID="JMz-BN-nf0">
+            <objects>
+                <tableViewController id="TxG-Zf-9oo" customClass="MoviesListTableViewController" customModule="customMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lpX-oC-QOr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCell" rowHeight="80" id="bZg-W2-M7q" customClass="MovieListCustomCell" customModule="customMusic" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZg-W2-M7q" id="TIq-Bc-kn3">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Efu-e7-5fK">
+                                            <rect key="frame" x="20" y="20" width="39.5" height="39.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Efu-e7-5fK" secondAttribute="height" multiplier="1:1" id="3ue-yk-uKB"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="movieName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dig-b7-5X7">
+                                            <rect key="frame" x="67.5" y="20" width="326.5" height="39.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="dig-b7-5X7" secondAttribute="bottom" constant="20" symbolic="YES" id="9Kj-8J-Ind"/>
+                                        <constraint firstItem="dig-b7-5X7" firstAttribute="leading" secondItem="Efu-e7-5fK" secondAttribute="trailing" constant="8" symbolic="YES" id="IrB-JD-Lpe"/>
+                                        <constraint firstItem="dig-b7-5X7" firstAttribute="top" secondItem="TIq-Bc-kn3" secondAttribute="top" constant="20" symbolic="YES" id="eEj-r7-Ctc"/>
+                                        <constraint firstItem="Efu-e7-5fK" firstAttribute="leading" secondItem="TIq-Bc-kn3" secondAttribute="leading" constant="20" symbolic="YES" id="fig-LG-JHs"/>
+                                        <constraint firstItem="dig-b7-5X7" firstAttribute="leading" secondItem="Efu-e7-5fK" secondAttribute="trailing" constant="8" symbolic="YES" id="ifk-i1-XVj"/>
+                                        <constraint firstItem="Efu-e7-5fK" firstAttribute="top" secondItem="TIq-Bc-kn3" secondAttribute="top" constant="20" symbolic="YES" id="jfN-sq-O8y"/>
+                                        <constraint firstAttribute="bottom" secondItem="Efu-e7-5fK" secondAttribute="bottom" constant="20" symbolic="YES" id="m5w-lj-YK5"/>
+                                        <constraint firstAttribute="trailing" secondItem="dig-b7-5X7" secondAttribute="trailing" constant="20" symbolic="YES" id="tD1-Ud-vGI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="icon" destination="Efu-e7-5fK" id="stQ-Ap-yh6"/>
+                                    <outlet property="name" destination="dig-b7-5X7" id="Df2-db-eau"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TxG-Zf-9oo" id="8p4-zo-fjS"/>
+                            <outlet property="delegate" destination="TxG-Zf-9oo" id="DYm-cu-JVz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xzx-aB-O0q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="-214.28571428571428"/>
+        </scene>
+    </scenes>
+</document>
