@@ -35,8 +35,11 @@ class MovieDetailListViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return cellData.count
+        var rows = 0
+        if expandedSection.contains(section) {
+            rows = cellData.count
+        }
+        return rows
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,23 +52,32 @@ class MovieDetailListViewController: UITableViewController {
         return headerRowHeight
     }
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        return 3
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 4
+    }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let cell = Bundle.main.loadNibNamed("MovieDetailHeaderViewCell", owner: self, options: nil)?.first as! MovieDetailHeaderViewCell
         cell.delegate = self
-        if let selectedMovie = selectedMovie {
-            cell.detailImage.image = selectedMovie.image
-            cell.detailTitle.text = selectedMovie.message
+        cell.selectedSection = section
+        cell.detailImage.image = selectedMovie?.image
+        cell.detailTitle.text = selectedMovie?.message
+        if expandedSection.contains(section) {
+            cell.showButton.setTitle("Show Less", for: .normal)
+        } else {
+            cell.showButton.setTitle("Show More", for: .normal)
         }
         return cell
     }
 }
 
 extension MovieDetailListViewController: MovieDetailHeaderViewCellDelegate {
-    func showButtonDidTaped() {
-        print("Darling")
+    func showButtonDidTaped(section: Int) {
+        if expandedSection.contains(section) {
+            expandedSection = expandedSection.filter{ $0 != section }
+        } else {
+            expandedSection.append(section)
+        }
+        tableView.reloadData()
     }
 }

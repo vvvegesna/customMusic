@@ -9,17 +9,19 @@
 import UIKit
 
 protocol MovieDetailHeaderViewCellDelegate {
-    func showButtonDidTaped()
+    func showButtonDidTaped(section: Int)
 }
 
 class MovieDetailHeaderViewCell: UITableViewCell {
 
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTitle: UILabel!
+    @IBOutlet weak var showButton: UIButton!
+    
     var delegate: MovieDetailHeaderViewCellDelegate?
-    var section: Int = 0
+    var selectedSection: Int = 0
    
     @IBAction func showLessTaped(_ sender: UIButton) {
-        delegate?.showButtonDidTaped()
+        delegate?.showButtonDidTaped(section: selectedSection)
     }
 }
