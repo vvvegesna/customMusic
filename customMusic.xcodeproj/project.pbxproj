@@ -14,6 +14,9 @@
 		8314E93422AC546200991795 /* customMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314E93322AC546200991795 /* customMusicTests.swift */; };
 		8314E93F22AC546200991795 /* customMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314E93E22AC546200991795 /* customMusicUITests.swift */; };
 		8314E94D22AC55CC00991795 /* MoviesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8314E94C22AC55CC00991795 /* MoviesListTableViewController.swift */; };
+		8397F49F22B166710003DF35 /* MovieDetailHeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397F49D22B166710003DF35 /* MovieDetailHeaderViewCell.swift */; };
+		8397F4A022B166710003DF35 /* MovieDetailHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8397F49E22B166710003DF35 /* MovieDetailHeaderViewCell.xib */; };
+		8397F4A422B168890003DF35 /* MovieDetailListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8397F4A322B168890003DF35 /* MovieDetailListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		8314E93E22AC546200991795 /* customMusicUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customMusicUITests.swift; sourceTree = "<group>"; };
 		8314E94022AC546200991795 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8314E94C22AC55CC00991795 /* MoviesListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewController.swift; sourceTree = "<group>"; };
+		8397F49D22B166710003DF35 /* MovieDetailHeaderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailHeaderViewCell.swift; sourceTree = "<group>"; };
+		8397F49E22B166710003DF35 /* MovieDetailHeaderViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailHeaderViewCell.xib; sourceTree = "<group>"; };
+		8397F4A322B168890003DF35 /* MovieDetailListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +105,13 @@
 			children = (
 				8314E91E22AC545E00991795 /* AppDelegate.swift */,
 				8314E92222AC545E00991795 /* Main.storyboard */,
+				8397F4A322B168890003DF35 /* MovieDetailListViewController.swift */,
 				8314E94C22AC55CC00991795 /* MoviesListTableViewController.swift */,
 				8314E92522AC546100991795 /* Assets.xcassets */,
 				8314E92722AC546100991795 /* LaunchScreen.storyboard */,
 				8314E92A22AC546100991795 /* Info.plist */,
+				8397F49D22B166710003DF35 /* MovieDetailHeaderViewCell.swift */,
+				8397F49E22B166710003DF35 /* MovieDetailHeaderViewCell.xib */,
 			);
 			path = customMusic;
 			sourceTree = "<group>";
@@ -230,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8314E92922AC546100991795 /* LaunchScreen.storyboard in Resources */,
+				8397F4A022B166710003DF35 /* MovieDetailHeaderViewCell.xib in Resources */,
 				8314E92622AC546100991795 /* Assets.xcassets in Resources */,
 				8314E92422AC545E00991795 /* Main.storyboard in Resources */,
 			);
@@ -256,8 +266,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8397F4A422B168890003DF35 /* MovieDetailListViewController.swift in Sources */,
 				8314E94D22AC55CC00991795 /* MoviesListTableViewController.swift in Sources */,
 				8314E91F22AC545E00991795 /* AppDelegate.swift in Sources */,
+				8397F49F22B166710003DF35 /* MovieDetailHeaderViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

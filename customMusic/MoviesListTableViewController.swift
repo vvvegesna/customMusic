@@ -42,4 +42,11 @@ class MoviesListTableViewController: UITableViewController {
         cell.name.text = data[indexPath.row].message
         return cell
     }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailVC = segue.destination as! MovieDetailListViewController
+        if let indexPath = tableView?.indexPathForSelectedRow {
+            detailVC.selectedMovie = data[indexPath.row]
+        }
+    }
 }
